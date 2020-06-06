@@ -14,3 +14,20 @@
     </div>
   </div>
 </templete>
+
+<script>
+export default{
+    date(){
+        return{
+          inputTitle: "",
+          inputPeriod: "",
+          inputDetail: ""
+        };
+    },
+    methods:{
+        creatTask(){
+            //タスクを生成する処理
+        }
+    }
+};
+</script>
