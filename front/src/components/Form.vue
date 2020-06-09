@@ -16,6 +16,8 @@
 </templete>
 
 <script>
+import api from "@/api";
+
 export default{
     date(){
         return{
@@ -25,8 +27,13 @@ export default{
         };
     },
     methods:{
-        creatTask(){
-            //タスクを生成する処理
+        asnyc creatTask(){
+            const result = await api.post("/tasks",{
+                title: this.inputTiltle,
+                period: this.inputPeriod,
+                detail: this.inputDetail
+                });
+            console.log(result);
         }
     }
 };
